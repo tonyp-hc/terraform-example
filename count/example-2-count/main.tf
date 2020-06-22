@@ -1,5 +1,5 @@
 # terraform-examples
-## count: example 2 - resource count 
+## count: example 2 - count meta-argument 
 
 resource "random_pet" "server_names" {
   count = 2
