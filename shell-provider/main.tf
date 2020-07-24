@@ -1,6 +1,12 @@
 provider "shell" {
 }
 
+resource "null_resource" "force-run" {
+  triggers = {
+    trigger = "${uuid()}"
+  }
+}
+
 data "shell_script" "user" {
 	lifecycle_commands {
 		read = <<-EOF
